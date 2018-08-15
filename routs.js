@@ -147,7 +147,6 @@ module.exports = function (app, todos, fs, database, crypto) {
                 res.send(result)
             });
     });
-}
 
 //
     // sign up, login and logout a user
@@ -224,3 +223,5 @@ module.exports = function (app, todos, fs, database, crypto) {
         req.session.email = false;
         res.redirect('/login');
     });
+
+}
