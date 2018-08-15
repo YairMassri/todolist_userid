@@ -55,6 +55,7 @@ window.onload = function () {
                 credentials: "include",
                 body: JSON.stringify({
                     text: newtodo.value,
+                    userid: req.session.userid
                 })
             })
                 .then(response => response.json())
@@ -66,6 +67,7 @@ window.onload = function () {
                             text: newtodo.value,
                             complete: false,
                             created: response.created,
+                            userid: req.session.userid
                         });
 
                         newtodo.value = '';
