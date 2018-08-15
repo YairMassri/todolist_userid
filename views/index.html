@@ -7,10 +7,28 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
+    <script src="./moment.js"></script>
 </head>
 
 <body>
     <div class="allpage">
+            <div class="col-sm">
+                    <% if(typeof hideLogin === 'undefined') { %>
+                    <nav class="navbar navbar-light header">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login"><%= username %></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout-submit">Logout</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <% } %>
+            </div>
         <header class="new-todo">
             <h1>DO IT!!</h1>
             <p>To Do List App</p>
